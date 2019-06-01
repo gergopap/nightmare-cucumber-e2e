@@ -21,7 +21,7 @@ nightmare
   .wait('.mat-button-wrapper')
   .click('.mat-button-wrapper')
   .wait('#account-list')
-  .click('.mat-checkbox-layout')
+  .check('.mat-checkbox-layout')
   .wait('.mat-button-wrapper')
   .click('.mat-button-wrapper')
   .wait('.mat-button-wrapper')

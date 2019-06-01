@@ -1,10 +1,10 @@
 Feature: Bank account synchronization
 
-   I want to add and synchronize my bank account and share its transaction history with the app.
+   User wants to add and synchronize his bank account and share its transaction history with the app.
 
    Scenario: Sync account
-   When user opens the app
-   And user logs in to the app
+   Given user opens the app
+   When user logs in to the app
    And user adds a bank account
    And user shares the bank accounts history
    And user checks its synced correctly
