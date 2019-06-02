@@ -7,5 +7,4 @@ Feature: Bank account synchronization
    When user logs in to the app
    And user adds a bank account
    And user shares the bank accounts history
-   And user checks its synced correctly
    Then user should see the bank accounts history in the app
