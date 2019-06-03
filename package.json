@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --exit --timeout=600000"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cucumber": "^5.1.0",
+    "mocha": "^6.1.4",
     "nightmare": "^3.0.2"
   }
 }
