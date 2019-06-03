@@ -28,6 +28,7 @@ When('user logs in to the app', function (done) {
     .type('#username', ['istvan.kadar.js@gmail.com'])
     .type('#password', ['asdf1234'])
     .click('#kc_input_button')
+    .wait(1000)
     .then(result => {
       done();
     })
@@ -69,7 +70,8 @@ When('user shares the bank accounts history', function (done) {
 Then('user should see the bank accounts history in the app', function (done) {
   nightmare
     .click('#mat-dialog-0 > app-info-sharing-confirm-ui-dialog > app-info-sharing-confirm-component > div > div.isc-confirm-block > div.isc-confirm-button-container.ng-star-inserted > button > span')
-    .wait('.striped')
+    .wait(1000)
+    .wait('body > div.container > div.transaction-list > div > table')
     .then(result => {
       done();
     })

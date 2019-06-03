@@ -32,7 +32,8 @@ describe('bank account sync e2e test', function () {
         .click('.mat-button-wrapper')
         .wait('#mat-dialog-0 > app-info-sharing-confirm-ui-dialog > app-info-sharing-confirm-component > div > div.isc-confirm-block > div.isc-confirm-button-container.ng-star-inserted > button > span')
         .click('#mat-dialog-0 > app-info-sharing-confirm-ui-dialog > app-info-sharing-confirm-component > div > div.isc-confirm-block > div.isc-confirm-button-container.ng-star-inserted > button > span')
-        .wait('.striped')
+        .wait(1000)
+        .wait('body > div.container > div.transaction-list > div > table')
         .wait(3000)
         .end(done)
         .catch(error => {
@@ -45,6 +46,7 @@ describe('bank account sync e2e test', function () {
       const nightmare = Nightmare({ show: true });
       nightmare
         .goto('https://ui.sandbox.aggreg8.hu')
+        .wait(1000)
         .wait('#username')
         .type('#username', ['istvan.kadar.js@gmail.com'])
         .type('#password', ['asdf1234'])
@@ -57,6 +59,7 @@ describe('bank account sync e2e test', function () {
         .wait('#revokeBtn > span')
         .click('#revokeBtn > span')
         .wait(1000)
+        .wait('#mat-tab-content-0-0 > div > app-connect-new-bank-component > div > div > div > div.card-parent-block > div.main-title.desktop-title')
         .end(done)
         .catch(error => {
           console.error('Error:', error);
